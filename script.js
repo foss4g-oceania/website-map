@@ -1,5 +1,5 @@
 var foss4gMap = {
-  token: '<ACCESS_TOKEN>',
+  token: 'pk.eyJ1IjoiYWxhbnRnZW8tcHJlc2FsZXMiLCJhIjoiY2prbjg1aXQxMDBiMDNxcGk2bjdzemE4cSJ9.bZzUZUuSiYwyjPgSSwuImg',
   legendClasses: {
     conferenceLocations: 'Conference Locations',
     socialEvents: 'Social Events',
