@@ -28,6 +28,21 @@ var foss4gMap = {
       legendClass: 'conferenceLocations'
     },
     {
+      id: 'sevenSeedsCafe',
+      name: 'Seven Seeds Cafe',
+      address: '114 Berkeley St, Carlton',
+      description: '<p>The Women in Geospatial Breakfast will take place at this airy, industrial-chic cafe.</p>',
+      website: 'https://sevenseeds.com.au/',
+      directionsLink: 'https://www.google.com.au/maps/dir//Seven+Seeds+Specialty+Coffee,+114+Berkeley+St,+Carlton+VIC+3053',
+      coords: [144.9591, -37.8029],
+      mobileZoomCoords: [144.9591, -37.8029],
+      bearing: 0,
+      zoom: 16,
+      pitch: 0,
+      icon: 'restaurant',
+      legendClass: 'socialEvents'
+    },
+    {
       id: 'brunswickMessHall',
       name: 'Brunswick Mess Hall',
       address: '400 Sydney Rd, Brunswick',
@@ -42,20 +57,20 @@ var foss4gMap = {
       icon: 'restaurant',
       legendClass: 'socialEvents'
     },
-    {
-      id: 'shawDaveySlum',
-      name: 'Shaw Davey Slum',
-      address: '171-175 Elgin St, Carlton',
-      website: 'http://theshawdaveyslum.com.au/',
-      directionsLink: 'https://www.google.com/maps/dir//The+Shaw+Davey+Slum,+171-175+Elgin+St,+Carlton+VIC+3053/',
-      coords: [144.968708, -37.797497],
-      mobileZoomCoords: [144.968708, -37.797105],
-      bearing: 0,
-      zoom: 17,
-      pitch: 0,
-      icon: 'fastFood',
-      legendClass: 'socialEvents'
-    },
+    // {
+    //   id: 'shawDaveySlum',
+    //   name: 'Shaw Davey Slum',
+    //   address: '171-175 Elgin St, Carlton',
+    //   website: 'http://theshawdaveyslum.com.au/',
+    //   directionsLink: 'https://www.google.com/maps/dir//The+Shaw+Davey+Slum,+171-175+Elgin+St,+Carlton+VIC+3053/',
+    //   coords: [144.968708, -37.797497],
+    //   mobileZoomCoords: [144.968708, -37.797105],
+    //   bearing: 0,
+    //   zoom: 17,
+    //   pitch: 0,
+    //   icon: 'fastFood',
+    //   legendClass: 'socialEvents'
+    // },
     {
       id: 'melbourneAirport',
       name: 'Melbourne Airport',
@@ -98,10 +113,15 @@ var foss4gMap = {
     // Save the SVG definition here and replace fill color
     var iconSvg = {
       marker: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" height="21" width="21"><title>marker-15.svg</title><rect fill="none" x="0" y="0" width="21" height="21"/><path fill="rgba(255,255,255,0.25)" transform="translate(3 3)" d="M7.5,0C5.0676,0,2.2297,1.4865,2.2297,5.2703  C2.2297,7.8378,6.2838,13.5135,7.5,15c1.0811-1.4865,5.2703-7.027,5.2703-9.7297C12.7703,1.4865,9.9324,0,7.5,0z" style="stroke-linejoin:round;stroke-miterlimit:4px;" stroke="rgba(255,255,255,0.25)" stroke-width="2"/><path fill="' + color + '" transform="translate(3 3)" d="M7.5,0C5.0676,0,2.2297,1.4865,2.2297,5.2703  C2.2297,7.8378,6.2838,13.5135,7.5,15c1.0811-1.4865,5.2703-7.027,5.2703-9.7297C12.7703,1.4865,9.9324,0,7.5,0z"/></svg>',
+
       star: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" height="21" width="21"><title>star-15.svg</title><rect fill="none" x="0" y="0" width="21" height="21"/><path fill="rgba(255,255,255,0.25)" transform="translate(3 3)" d="M7.5,0l-2,5h-5l4,3.5l-2,6l5-3.5  l5,3.5l-2-6l4-3.5h-5L7.5,0z" style="stroke-linejoin:round;stroke-miterlimit:4px;" stroke="rgba(255,255,255,0.25)" stroke-width="2"/><path fill="' + color + '" transform="translate(3 3)" d="M7.5,0l-2,5h-5l4,3.5l-2,6l5-3.5  l5,3.5l-2-6l4-3.5h-5L7.5,0z"/></svg>',
+
       restaurant: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" height="21" width="21"><title>restaurant-15.svg</title><rect fill="none" x="0" y="0" width="21" height="21"/><path fill="rgba(255,255,255,0.25)" transform="translate(3 3)" d="M3.5,0l-1,5.5c-0.1464,0.805,1.7815,1.181,1.75,2L4,14c-0.0384,0.9993,1,1,1,1s1.0384-0.0007,1-1L5.75,7.5  c-0.0314-0.8176,1.7334-1.1808,1.75-2L6.5,0H6l0.25,4L5.5,4.5L5.25,0h-0.5L4.5,4.5L3.75,4L4,0H3.5z M12,0  c-0.7364,0-1.9642,0.6549-2.4551,1.6367C9.1358,2.3731,9,4.0182,9,5v2.5c0,0.8182,1.0909,1,1.5,1L10,14c-0.0905,0.9959,1,1,1,1  s1,0,1-1V0z" style="stroke-linejoin:round;stroke-miterlimit:4px;" stroke="rgba(255,255,255,0.25)" stroke-width="2"/><path fill="' + color + '" transform="translate(3 3)" d="M3.5,0l-1,5.5c-0.1464,0.805,1.7815,1.181,1.75,2L4,14c-0.0384,0.9993,1,1,1,1s1.0384-0.0007,1-1L5.75,7.5  c-0.0314-0.8176,1.7334-1.1808,1.75-2L6.5,0H6l0.25,4L5.5,4.5L5.25,0h-0.5L4.5,4.5L3.75,4L4,0H3.5z M12,0  c-0.7364,0-1.9642,0.6549-2.4551,1.6367C9.1358,2.3731,9,4.0182,9,5v2.5c0,0.8182,1.0909,1,1.5,1L10,14c-0.0905,0.9959,1,1,1,1  s1,0,1-1V0z"/></svg>',
+
       fastFood: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" height="21" width="21"><title>fast-food-15.svg</title><rect fill="none" x="0" y="0" width="21" height="21"/><path fill="rgba(255,255,255,0.25)" transform="translate(3 3)" d="M14,8c0,0.5523-0.4477,1-1,1H2C1.4477,9,1,8.5523,1,8s0.4477-1,1-1h11C13.5523,7,14,7.4477,14,8z M3.5,10H2  c0,1.6569,1.3431,3,3,3h5c1.6569,0,3-1.3431,3-3H3.5z M3,6H2V4c0-1.1046,0.8954-2,2-2h7c1.1046,0,2,0.8954,2,2v2H3z M11,4.5  C11,4.7761,11.2239,5,11.5,5S12,4.7761,12,4.5S11.7761,4,11.5,4S11,4.2239,11,4.5z M9,3.5C9,3.7761,9.2239,4,9.5,4S10,3.7761,10,3.5  S9.7761,3,9.5,3S9,3.2239,9,3.5z M7,4.5C7,4.7761,7.2239,5,7.5,5S8,4.7761,8,4.5S7.7761,4,7.5,4S7,4.2239,7,4.5z M5,3.5  C5,3.7761,5.2239,4,5.5,4S6,3.7761,6,3.5S5.7761,3,5.5,3S5,3.2239,5,3.5z M3,4.5C3,4.7761,3.2239,5,3.5,5S4,4.7761,4,4.5  S3.7761,4,3.5,4S3,4.2239,3,4.5z" style="stroke-linejoin:round;stroke-miterlimit:4px;" stroke="rgba(255,255,255,0.25)" stroke-width="2"/><path fill="' + color + '" transform="translate(3 3)" d="M14,8c0,0.5523-0.4477,1-1,1H2C1.4477,9,1,8.5523,1,8s0.4477-1,1-1h11C13.5523,7,14,7.4477,14,8z M3.5,10H2  c0,1.6569,1.3431,3,3,3h5c1.6569,0,3-1.3431,3-3H3.5z M3,6H2V4c0-1.1046,0.8954-2,2-2h7c1.1046,0,2,0.8954,2,2v2H3z M11,4.5  C11,4.7761,11.2239,5,11.5,5S12,4.7761,12,4.5S11.7761,4,11.5,4S11,4.2239,11,4.5z M9,3.5C9,3.7761,9.2239,4,9.5,4S10,3.7761,10,3.5  S9.7761,3,9.5,3S9,3.2239,9,3.5z M7,4.5C7,4.7761,7.2239,5,7.5,5S8,4.7761,8,4.5S7.7761,4,7.5,4S7,4.2239,7,4.5z M5,3.5  C5,3.7761,5.2239,4,5.5,4S6,3.7761,6,3.5S5.7761,3,5.5,3S5,3.2239,5,3.5z M3,4.5C3,4.7761,3.2239,5,3.5,5S4,4.7761,4,4.5  S3.7761,4,3.5,4S3,4.2239,3,4.5z"/></svg>',
+
       airport: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" height="21" width="21"><title>airport-15.svg</title><rect fill="none" x="0" y="0" width="21" height="21"/><path fill="rgba(255,255,255,0.25)" transform="translate(3 3)" d="M15,6.8182L15,8.5l-6.5-1  l-0.3182,4.7727L11,14v1l-3.5-0.6818L4,15v-1l2.8182-1.7273L6.5,7.5L0,8.5V6.8182L6.5,4.5v-3c0,0,0-1.5,1-1.5s1,1.5,1,1.5v2.8182  L15,6.8182z" style="stroke-linejoin:round;stroke-miterlimit:4px;" stroke="rgba(255,255,255,0.25)" stroke-width="2"/><path fill="' + color + '" transform="translate(3 3)" d="M15,6.8182L15,8.5l-6.5-1  l-0.3182,4.7727L11,14v1l-3.5-0.6818L4,15v-1l2.8182-1.7273L6.5,7.5L0,8.5V6.8182L6.5,4.5v-3c0,0,0-1.5,1-1.5s1,1.5,1,1.5v2.8182  L15,6.8182z"/></svg>',
+
       rail: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" height="21" width="21"><title>rail-15.svg</title><rect fill="none" x="0" y="0" width="21" height="21"/><path fill="rgba(255,255,255,0.25)" transform="translate(3 3)" d="M11.93,14.26L11.93,14.26l-1-2l0,0c-0.1287-0.2443-0.4311-0.338-0.6754-0.2092C10.0313,12.1684,9.9307,12.434,10.02,12.67  l0,0l0,0L10.19,13H4.81l0.13-0.27l0,0l0,0c0.0977-0.2583-0.0325-0.5469-0.2908-0.6446C4.4132,11.9962,4.1476,12.0968,4.03,12.32l0,0  l-1,2l0,0C3.0088,14.3776,2.9986,14.4387,3,14.5C3,14.7761,3.2239,15,3.5,15c0.1802-0.001,0.3454-0.1008,0.43-0.26l0,0v-0.05H4  L4.31,14h6.38L11,14.69l0,0v0.05l0,0c0.0846,0.1592,0.2498,0.259,0.43,0.26c0.2761,0,0.5-0.2239,0.5-0.5  C11.9499,14.4212,11.9499,14.3388,11.93,14.26z" style="stroke-linejoin:round;stroke-miterlimit:4px;" stroke="rgba(255,255,255,0.25)" stroke-width="2"/><path fill="rgba(255,255,255,0.25)" transform="translate(3 3)" d="M12,1H3C2.4477,1,2,1.4477,2,2v8c0,0.5523,0.4477,1,1,1h9c0.5523,0,1-0.4477,1-1V2C13,1.4477,12.5523,1,12,1z M5.76,1.5   h3.5c0.1381,0,0.25,0.1119,0.25,0.25S9.3981,2,9.26,2H5.75C5.6119,2,5.5,1.8881,5.5,1.75S5.6119,1.5,5.75,1.5H5.76z M5,10   c-0.5523,0-1-0.4477-1-1s0.4477-1,1-1s1,0.4477,1,1S5.5523,10,5,10z M7,7H3.5C3.2239,7,3,6.7761,3,6.5v-3C3,3.2239,3.2239,3,3.5,3   H7V7z M10,10c-0.5523,0-1-0.4477-1-1s0.4477-1,1-1s1,0.4477,1,1S10.5523,10,10,10z M12,6.5C12,6.7761,11.7761,7,11.5,7H8V3h3.5   C11.7761,3,12,3.2239,12,3.5V6.5z" style="stroke-linejoin:round;stroke-miterlimit:4px;" stroke="rgba(255,255,255,0.25)" stroke-width="2"/><path fill="rgba(255,255,255,0.25)" transform="translate(3 3)" d="M12,1H3C2.4477,1,2,1.4477,2,2v8c0,0.5523,0.4477,1,1,1h9c0.5523,0,1-0.4477,1-1V2C13,1.4477,12.5523,1,12,1z M5.76,1.5   h3.5c0.1381,0,0.25,0.1119,0.25,0.25S9.3981,2,9.26,2H5.75C5.6119,2,5.5,1.8881,5.5,1.75S5.6119,1.5,5.75,1.5H5.76z M5,10   c-0.5523,0-1-0.4477-1-1s0.4477-1,1-1s1,0.4477,1,1S5.5523,10,5,10z M7,7H3.5C3.2239,7,3,6.7761,3,6.5v-3C3,3.2239,3.2239,3,3.5,3   H7V7z M10,10c-0.5523,0-1-0.4477-1-1s0.4477-1,1-1s1,0.4477,1,1S10.5523,10,10,10z M12,6.5C12,6.7761,11.7761,7,11.5,7H8V3h3.5   C11.7761,3,12,3.2239,12,3.5V6.5z" style="stroke-linejoin:round;stroke-miterlimit:4px;" stroke="rgba(255,255,255,0.25)" stroke-width="2"/><path fill="' + color + '" transform="translate(3 3)" d="M11.93,14.26L11.93,14.26l-1-2l0,0c-0.1287-0.2443-0.4311-0.338-0.6754-0.2092C10.0313,12.1684,9.9307,12.434,10.02,12.67  l0,0l0,0L10.19,13H4.81l0.13-0.27l0,0l0,0c0.0977-0.2583-0.0325-0.5469-0.2908-0.6446C4.4132,11.9962,4.1476,12.0968,4.03,12.32l0,0  l-1,2l0,0C3.0088,14.3776,2.9986,14.4387,3,14.5C3,14.7761,3.2239,15,3.5,15c0.1802-0.001,0.3454-0.1008,0.43-0.26l0,0v-0.05H4  L4.31,14h6.38L11,14.69l0,0v0.05l0,0c0.0846,0.1592,0.2498,0.259,0.43,0.26c0.2761,0,0.5-0.2239,0.5-0.5  C11.9499,14.4212,11.9499,14.3388,11.93,14.26z"/><path fill="' + color + '" transform="translate(3 3)" d="M12,1H3C2.4477,1,2,1.4477,2,2v8c0,0.5523,0.4477,1,1,1h9c0.5523,0,1-0.4477,1-1V2C13,1.4477,12.5523,1,12,1z M5.76,1.5   h3.5c0.1381,0,0.25,0.1119,0.25,0.25S9.3981,2,9.26,2H5.75C5.6119,2,5.5,1.8881,5.5,1.75S5.6119,1.5,5.75,1.5H5.76z M5,10   c-0.5523,0-1-0.4477-1-1s0.4477-1,1-1s1,0.4477,1,1S5.5523,10,5,10z M7,7H3.5C3.2239,7,3,6.7761,3,6.5v-3C3,3.2239,3.2239,3,3.5,3   H7V7z M10,10c-0.5523,0-1-0.4477-1-1s0.4477-1,1-1s1,0.4477,1,1S10.5523,10,10,10z M12,6.5C12,6.7761,11.7761,7,11.5,7H8V3h3.5   C11.7761,3,12,3.2239,12,3.5V6.5z"/><path fill="' + color + '" transform="translate(3 3)" d="M12,1H3C2.4477,1,2,1.4477,2,2v8c0,0.5523,0.4477,1,1,1h9c0.5523,0,1-0.4477,1-1V2C13,1.4477,12.5523,1,12,1z M5.76,1.5   h3.5c0.1381,0,0.25,0.1119,0.25,0.25S9.3981,2,9.26,2H5.75C5.6119,2,5.5,1.8881,5.5,1.75S5.6119,1.5,5.75,1.5H5.76z M5,10   c-0.5523,0-1-0.4477-1-1s0.4477-1,1-1s1,0.4477,1,1S5.5523,10,5,10z M7,7H3.5C3.2239,7,3,6.7761,3,6.5v-3C3,3.2239,3.2239,3,3.5,3   H7V7z M10,10c-0.5523,0-1-0.4477-1-1s0.4477-1,1-1s1,0.4477,1,1S10.5523,10,10,10z M12,6.5C12,6.7761,11.7761,7,11.5,7H8V3h3.5   C11.7761,3,12,3.2239,12,3.5V6.5z"/></svg>'
     }
     return encodeURI('data:image/svg+xml;utf8,' + iconSvg[iconName]).replace(new RegExp('#', 'g'), '%23');
