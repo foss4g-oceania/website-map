@@ -72,20 +72,21 @@ var foss4gMap = {
     //   icon: 'beer',
     //   legendClass: 'socialEvents'
     // },
-    // {
-    //   id: 'shawDaveySlum',
-    //   name: 'Shaw Davey Slum',
-    //   address: '171-175 Elgin St, Carlton',
-    //   website: 'http://theshawdaveyslum.com.au/',
-    //   directionsLink: 'https://www.google.com/maps/dir//The+Shaw+Davey+Slum,+171-175+Elgin+St,+Carlton+VIC+3053/',
-    //   coords: [144.968708, -37.797497],
-    //   mobileZoomCoords: [144.968708, -37.797105],
-    //   bearing: 0,
-    //   zoom: 17,
-    //   pitch: 0,
-    //   icon: 'fastFood',
-    //   legendClass: 'socialEvents'
-    // },
+    {
+      id: 'shawDaveySlum',
+      name: 'Shaw Davey Slum',
+      address: '171-175 Elgin St, Carlton',
+      description: '<p>The Icebreaker social will be held here on Tuesday evening after workshops. Come and meet fellow attendees in a relaxed social setting, before the conference starts the next morning.</p>',
+      website: 'http://theshawdaveyslum.com.au/',
+      directionsLink: 'https://www.google.com/maps/dir//The+Shaw+Davey+Slum,+171-175+Elgin+St,+Carlton+VIC+3053/',
+      coords: [144.968708, -37.797497],
+      mobileZoomCoords: [144.968708, -37.797105],
+      bearing: 0,
+      zoom: 17,
+      pitch: 0,
+      icon: 'bar',
+      legendClass: 'socialEvents'
+    },
     {
       id: 'melbourneAirport',
       name: 'Melbourne Airport',
@@ -132,6 +133,8 @@ var foss4gMap = {
       star: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" height="21" width="21"><title>star-15.svg</title><rect fill="none" x="0" y="0" width="21" height="21"/><path fill="rgba(255,255,255,0.25)" transform="translate(3 3)" d="M7.5,0l-2,5h-5l4,3.5l-2,6l5-3.5  l5,3.5l-2-6l4-3.5h-5L7.5,0z" style="stroke-linejoin:round;stroke-miterlimit:4px;" stroke="rgba(255,255,255,0.25)" stroke-width="2"/><path fill="' + color + '" transform="translate(3 3)" d="M7.5,0l-2,5h-5l4,3.5l-2,6l5-3.5  l5,3.5l-2-6l4-3.5h-5L7.5,0z"/></svg>',
 
       restaurant: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" height="21" width="21"><title>restaurant-15.svg</title><rect fill="none" x="0" y="0" width="21" height="21"/><path fill="rgba(255,255,255,0.25)" transform="translate(3 3)" d="M3.5,0l-1,5.5c-0.1464,0.805,1.7815,1.181,1.75,2L4,14c-0.0384,0.9993,1,1,1,1s1.0384-0.0007,1-1L5.75,7.5  c-0.0314-0.8176,1.7334-1.1808,1.75-2L6.5,0H6l0.25,4L5.5,4.5L5.25,0h-0.5L4.5,4.5L3.75,4L4,0H3.5z M12,0  c-0.7364,0-1.9642,0.6549-2.4551,1.6367C9.1358,2.3731,9,4.0182,9,5v2.5c0,0.8182,1.0909,1,1.5,1L10,14c-0.0905,0.9959,1,1,1,1  s1,0,1-1V0z" style="stroke-linejoin:round;stroke-miterlimit:4px;" stroke="rgba(255,255,255,0.25)" stroke-width="2"/><path fill="' + color + '" transform="translate(3 3)" d="M3.5,0l-1,5.5c-0.1464,0.805,1.7815,1.181,1.75,2L4,14c-0.0384,0.9993,1,1,1,1s1.0384-0.0007,1-1L5.75,7.5  c-0.0314-0.8176,1.7334-1.1808,1.75-2L6.5,0H6l0.25,4L5.5,4.5L5.25,0h-0.5L4.5,4.5L3.75,4L4,0H3.5z M12,0  c-0.7364,0-1.9642,0.6549-2.4551,1.6367C9.1358,2.3731,9,4.0182,9,5v2.5c0,0.8182,1.0909,1,1.5,1L10,14c-0.0905,0.9959,1,1,1,1  s1,0,1-1V0z"/></svg>',
+
+      bar: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" height="21" width="21"><title>bar-15.svg</title><rect fill="none" x="0" y="0" width="21" height="21"></rect><path fill="rgba(255,255,255,0.25)" transform="translate(3 3)" d="M7.5,1c-2,0-7,0.25-6.5,0.75L7,8v4c0,1-3,0.5-3,2h7c0-1.5-3-1-3-2V8l6-6.25C14.5,1.25,9.5,1,7.5,1z M7.5,2c2.5,0,4.75,0.25,4.75,0.25L11.5,3h-8L2.75,2.25C2.75,2.25,5,2,7.5,2z" style="stroke-linejoin:round;stroke-miterlimit:4px;" stroke="rgba(255,255,255,0.25)" stroke-width="2"></path><path fill="' + color + '" transform="translate(3 3)" d="M7.5,1c-2,0-7,0.25-6.5,0.75L7,8v4c0,1-3,0.5-3,2h7c0-1.5-3-1-3-2V8l6-6.25C14.5,1.25,9.5,1,7.5,1z M7.5,2c2.5,0,4.75,0.25,4.75,0.25L11.5,3h-8L2.75,2.25C2.75,2.25,5,2,7.5,2z"></path></svg>',
 
       beer: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" height="21" width="21"><title>beer-15.svg</title><rect fill="none" x="0" y="0" width="21" height="21"></rect><path fill="rgba(255,255,255,0.25)" transform="translate(3 3)" d="M12,5V2c0,0-1-1-4.5-1S3,2,3,2v3c0.0288,1.3915,0.3706,2.7586,1,4c0.6255,1.4348,0.6255,3.0652,0,4.5c0,0,0,1,3.5,1s3.5-1,3.5-1c-0.6255-1.4348-0.6255-3.0652,0-4.5C11.6294,7.7586,11.9712,6.3915,12,5z M7.5,13.5c-0.7966,0.035-1.5937-0.0596-2.36-0.28c0.203-0.7224,0.304-1.4696,0.3-2.22h4.12c-0.004,0.7504,0.097,1.4976,0.3,2.22C9.0937,13.4404,8.2966,13.535,7.5,13.5z M7.5,5C6.3136,5.0299,5.1306,4.8609,4,4.5v-2C5.131,2.1411,6.3137,1.9722,7.5,2C8.6863,1.9722,9.869,2.1411,11,2.5v2C9.8694,4.8609,8.6864,5.0299,7.5,5z" style="stroke-linejoin:round;stroke-miterlimit:4px;" stroke="rgba(255,255,255,0.25)" stroke-width="2"></path><path fill="' + color + '" transform="translate(3 3)" d="M12,5V2c0,0-1-1-4.5-1S3,2,3,2v3c0.0288,1.3915,0.3706,2.7586,1,4c0.6255,1.4348,0.6255,3.0652,0,4.5c0,0,0,1,3.5,1s3.5-1,3.5-1c-0.6255-1.4348-0.6255-3.0652,0-4.5C11.6294,7.7586,11.9712,6.3915,12,5z M7.5,13.5c-0.7966,0.035-1.5937-0.0596-2.36-0.28c0.203-0.7224,0.304-1.4696,0.3-2.22h4.12c-0.004,0.7504,0.097,1.4976,0.3,2.22C9.0937,13.4404,8.2966,13.535,7.5,13.5z M7.5,5C6.3136,5.0299,5.1306,4.8609,4,4.5v-2C5.131,2.1411,6.3137,1.9722,7.5,2C8.6863,1.9722,9.869,2.1411,11,2.5v2C9.8694,4.8609,8.6864,5.0299,7.5,5z"></path></svg>',
 
